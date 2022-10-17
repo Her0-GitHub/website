@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>MinoDeh - Official Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  </head>
+  <body>
+    <body bgcolor="#f0f0f0">
+    <header class="mino-bar">
+      <div class="inner-width">
+        <a href="index.html" class="logo"><img src="img/funghetto.png" alt="mino-logo"></a>
+        <i class="menu-toggle-btn fas fa-bars"></i>
+        <nav class="navigation-menu">
+          <a href="credits.html"><i class="fas fa-envelope work"></i>CONTATTI</a>
+          <a href="setup.html"><i class="fas fa-desktop setup"></i>IL MIO SETUP</a>
+          <a href="https://multicore.network"><i class="fas fa-globe mcnetwork"></i>MULTICORE</a>
+          <a href="valorant.html"><i class="fas fa-gamepad valorant"></i>VALORANT</a>
+        </nav>
+      </div>
+    </header>
+    <header class="mino-blu">
+      <center>
+        <br><h1>MinoDeh</h1>
+      </center>
+    </header>
+    <center><br>
+      <table>
+        <tr>
+          <div id="twitch-embed"></div>
+          <script src="https://embed.twitch.tv/embed/v1.js"></script>
+          <script type="text/javascript">
+            new Twitch.Embed("twitch-embed", {
+              width: 940,
+              height: 480,
+              allowfullscreen: false,
+              channel: "minodeh",
+              layout: "video",
+            });
+          </script>
+        </tr>
+    </center>
+  </body>
+</html>
