@@ -1,0 +1,92 @@
+/*  Credits CSS  */
+/*  Bisumto.it   */
+
+#header {
+    text-align: center;
+    font-variant: small-caps;
+}
+section h1{
+    font-variant:small-caps
+}
+.block p{
+    font-size:110%
+}
+.row{
+    margin-top:2em
+}
+.bg-red {
+    background-color: #b71c1c;
+    color: white;
+}
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    text-align:center;
+    margin-bottom:1em;
+    -webkit-transition: background-color 250ms linear;
+    -ms-transition: background-color 250ms linear;
+    transition: background-color 250ms linear;
+}
+.card-body{
+    -webkit-transition: background-color 250ms linear;
+    -ms-transition: background-color 250ms linear;
+    transition: background-color 250ms linear;
+    background-color: #b71c1c;
+}
+.card-body:hover{
+    background-color:transparent;
+}
+.card:hover {
+    -webkit-transition: background-color 250ms linear;
+    -ms-transition: background-color 250ms linear;
+    transition: background-color 250ms linear;
+}
+.card h5.card-title{
+    font-size:800%;
+    color:white
+}
+.card h3{
+    color:white;
+}
+.card p{
+    font-size:150%;
+}
+.separator{
+    margin:1em 5%;
+    border-color:white;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid white;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.top-buffer {
+    margin-top:20px;
+}
+.extra {
+    font-size: 10px
+}
+
+.bg-card-youtube:hover { background-color:#ff0000 }
+.bg-card-telegram:hover { background-color:#0088cc }
+.bg-card-instagram { z-index: 1; background-color:var(--redcraft-red);}
+.bg-card-instagram:hover::before { opacity: 1; }
+.bg-card-instagram::before {
+    position: absolute;
+    content: ""; top: 0; right: 0; bottom: 0; left: 0; z-index: -1;
+    transition: opacity 0.25s linear; opacity: 0;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+}
+.bg-card-twitter:hover { background-color:#1da1f2 }
+.bg-card-discord:hover { background-color:#5865F2 }
+.bg-card-github:hover { background-color:#24292e }
+.bg-card-twitch:hover { background-color:#a970ff }
