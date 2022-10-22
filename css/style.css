@@ -66,6 +66,7 @@ body{
 }
 
 .navigation-menu a:hover{
+  color: white;
   transform: scale(1.15);
 }
 
