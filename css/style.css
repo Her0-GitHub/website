@@ -66,9 +66,8 @@ body{
 }
 
 .navigation-menu a:hover{
-  background: #3B80B5;
-  color: #2f3640;
-  transform: scale(1.05);
+  color: white;
+  transform: scale(1.15);
 }
 
 .navigation-menu i{
