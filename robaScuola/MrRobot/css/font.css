@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'MrRobot';
+    src: url('../font/MrRobot.eot');
+    src: url('../font/MrRobot.eot?#iefix') format('embedded-opentype'),
+        url('../font/MrRobot.woff2') format('woff2'),
+        url('../font/MrRobot.woff') format('woff'),
+        url('../font/MrRobot.ttf') format('truetype'),
+        url('../font/MrRobot.svg#MrRobot') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,68 @@
+body{   
+    margin: 0 0 0 0;
+    background: black;
+    text-decoration: none;
+}
+aside{
+    position: absolute;
+    margin: 3% 30px 0 35%;
+    border-radius: 20px 20px 0 0;
+    color: white;
+    background-color: #1e1e1e;
+    padding: 15px;
+    font-size: 125%;
+    text-align: justify;
+}
+.side-image{
+    height: auto;
+    width: 35%;
+    position: absolute;
+}
+.title{
+    color: red;
+    font-family: MrRobot;
+    font-size:75px;
+    font-style: normal;
+}
+.subtitle{
+    color: red;
+    font-family: MrRobot;
+    font-size:50px;
+    font-style: normal;
+}
+#Personaggi{
+    text-decoration: underline;
+    transition: 1s;
+    text-decoration-color: red;
+}
+#Personaggi:hover{
+    font-size:60px;
+    transition: 2s;
+}
+table, th, td{
+    color: white;
+    text-align: center;
+    border: 1px solid gray;
+    padding: 10px;
+    margin-top:20px;
+}
+ul{
+    font-size: 95%;
+}
+#back{
+    color: red;
+    font-family: MrRobot;
+    font-size:45px;
+    font-style: normal;
+    text-decoration: underline;
+    transition: 1s;
+    text-decoration-color: red;
+}
+#back:hover{
+    font-size:55px;
+    transition: 2s;
+}
+aside img{
+    height: 100px;
+    border: 1px solid red;
+}
