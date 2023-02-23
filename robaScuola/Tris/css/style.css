@@ -1,0 +1,108 @@
+:root{
+    --primary: #f5deb3;
+    --secondary: #3242a5;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.prevent-select{
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#board{
+    background-color: var(--primary);
+    height: 600px;
+    width: 600px;
+    min-width: 600px;
+    min-height: 600px;
+    color: white;
+    font-size: 1000%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#a1{
+    width: 33.333%;
+    height: 33.333%;
+    background-color: var(--secondary);
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#a2{
+    width: 33.333%;
+    height: 33.333%;
+    background-color: var(--primary);
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#a3{
+    width: 33.333%;
+    height: 33.333%;
+    background-color: var(--secondary);
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#b1{
+    width: 33.333%;
+    height: 33.333%;
+    background-color: var(--primary);
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#b2{
+    width: 33.333%;
+    height: 33.333%;
+    background-color: var(--secondary);
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#b3{
+    width: 33.333%;
+    height: 33.333%;
+    background-color: var(--primary);
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#c1{
+    width: 33.333%;
+    height: 33.333%;
+    background-color: var(--secondary);
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#c2{
+    width: 33.333%;
+    height: 33.333%;
+    background-color: var(--primary);
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#c3{
+    width: 33.333%;
+    height: 33.333%;
+    background-color: var(--secondary);
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
