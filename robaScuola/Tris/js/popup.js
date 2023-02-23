@@ -7,7 +7,7 @@ function showDialog(title, message, btn) {
   header.innerHTML = title;
   if(message == ``)  body.style.display = 'none';
   else{
-    body.style.display = '';
+    body.style.display = ''
     body.innerHTML = message;
   }
   playBtn.innerHTML = btn;
