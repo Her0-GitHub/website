@@ -6,7 +6,7 @@ for (i = 0; i < board.length; i++) {
 }
 function input() {
     if (this.innerHTML == '') {
-        this.innerHTML = turno;
+        document.getElementById(this.id).innerHTML = turno;
         win(this.id);
         nTurni++;
         if(nTurni == 9) showDialog(`Pareggio`, '', 'Gioca Ancora');
