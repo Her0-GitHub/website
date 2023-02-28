@@ -6,11 +6,12 @@ for (i = 0; i < board.length; i++) {
 }
 function input() {
     if (this.innerHTML == '') {
-        document.getElementById(this.id).innerHTML = turno;
-        win(this.id);
         nTurni++;
-        if(nTurni == 9) showDialog(`Pareggio`, '', 'Gioca Ancora');
+        document.getElementById(this.id).innerHTML = turno;
+        if(win(this.id))            return;
+        else if(nTurni == 9)        showDialog(`Pareggio`, '', 'Gioca Ancora');
     } else return;
+    
     if (turno == "X")   turno = "O";
     else                turno = "X";
 }
@@ -26,8 +27,9 @@ function win(add) {
     ){
         document.getElementById(add).innerHTML = turno;
         showDialog('Tris', `Ha vinto il giocatore ${turno}`, 'Gioca Ancora');
-        
+        return 1;
     }
+    return 0;
 }
 function clear(){
     nTurni = 0;
