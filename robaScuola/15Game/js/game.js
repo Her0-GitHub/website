@@ -8,7 +8,7 @@ for (let i = 0; i < board.length; i++) {
 
 function move(){
     empty = document.getElementById("box-16");
-    if(this.innerHTML != ''){
+    if(this.innerHTML != '' && (Math.abs(this.value - empty.value) == 4 || Math.abs(this.value - empty.value))){
         temp = this.innerHTML;
         this.innerHTML = empty.innerHTML;
         empty.innerHTML =  temp;
