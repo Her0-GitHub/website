@@ -43,3 +43,7 @@ body{
     align-items: center;
     justify-content: center;
 }
+.empty{
+    background-color: var(--secondary);
+    border: 10px groove var(--secondary); 
+}

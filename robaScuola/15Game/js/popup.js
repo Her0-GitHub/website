@@ -18,5 +18,5 @@ function hideDialog() {
   dialog.style.display = 'none';
 }
 
-playBtn.addEventListener('click', clear);
-showDialog(`Tris`, ``, "Gioca");
+// playBtn.addEventListener('click', clear);
+// showDialog(`Tris`, ``, "Gioca");
