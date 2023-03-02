@@ -15,8 +15,9 @@ body{
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
 }
 .prevent-select{
     -webkit-user-select: none;
