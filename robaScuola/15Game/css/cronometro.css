@@ -1,5 +1,5 @@
 .cronometro{
-    display: flex;
+    display: inherit;
     font-size: 500%;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Major Mono Display', monospace;
 }

@@ -19,6 +19,7 @@
 }
 .dialog-body {
     padding: 16px;
+    font-size: 300%;
     color: white;
 }
 .dialog-footer {
