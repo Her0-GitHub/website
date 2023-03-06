@@ -19,4 +19,4 @@ function hideDialog() {
 }
 
 playBtn.addEventListener('click', hideDialog);
-// showDialog(``, ``, "Gioca");
+//showDialog(``, ``, "Gioca");
