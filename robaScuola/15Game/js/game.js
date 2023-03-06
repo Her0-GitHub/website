@@ -1,11 +1,13 @@
 const board = document.getElementsByClassName("box");
 
+for (let i = 0; i < board.length; i++) {
+    if(i != board.length-1) board[i].innerHTML = i+1;
+    board[i].addEventListener("click", move);
+}
+
 function setup(){
-    for (let i = 0; i < board.length; i++) {
-        if(i != board.length-1) board[i].innerHTML = i+1;
-        board[i].addEventListener("click", move);
-    }
     shuffle();
+    hideDialog();
 }
 
 let first = true;
@@ -39,7 +41,7 @@ function checkWin(){
         }
     }
     stopCronometro();
-    showDialog(`15 Game`, "Tempo Totale: " + (document.getElementById("cronometro").innerText).replaceAll("\n", ""), "Gioca");
+    showDialog(`15 Game`, "Tempo Totale: " + (document.getElementById("cronometro").innerText).replaceAll("\n", ""), "Reset");
 }
 
 function shuffle() {
@@ -54,6 +56,6 @@ function shuffle() {
         board[i].className = board[j].className;
         board[j].className = tempClass;
     }
-    idEmpty = document.getElementsByClassName("box empty")[0].id;
+    idEmpty = document.getElementsByClassName('box empty')[0].id;
 }
 setup();
