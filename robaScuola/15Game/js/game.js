@@ -1,12 +1,15 @@
 const board = document.getElementsByClassName("box");
 
-for (let i = 0; i < board.length; i++) {
-    if(i != board.length-1) board[i].innerHTML = i+1;
-    board[i].addEventListener("click", move);
+function setup(){
+    for (let i = 0; i < board.length; i++) {
+        if(i != board.length-1) board[i].innerHTML = i+1;
+        board[i].addEventListener("click", move);
+    }
+    shuffle();
 }
 
 let first = true;
-let idEmpty = "box-16";
+let idEmpty;
 
 function move(){
     const empty = document.getElementById(idEmpty);
@@ -51,21 +54,6 @@ function shuffle() {
         board[i].className = board[j].className;
         board[j].className = tempClass;
     }
-    // Verifica
-    let inversions = 0;
-    for (let i = 0; i < board.length; i++) {
-        if (board[i].innerHTML !== "") {
-            for (let j = i + 1; j < board.length; j++) {
-                if (board[j].innerHTML !== "" && parseInt(board[i].innerHTML) > parseInt(board[j].innerHTML)) {
-                    inversions++;
-                }
-            }
-        }
-    }
-    const emptyIndex = Math.floor(board.length / 4) * 4 - 1;
-    const emptyRow = Math.floor(emptyIndex / 4) + 1;
-    if ((inversions + emptyRow) % 2 !== 0) {
-        shuffle();
-    }
+    idEmpty = document.getElementsByClassName("box empty")[0].id;
 }
-shuffle();
+setup();
