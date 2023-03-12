@@ -1,13 +1,19 @@
 const board = document.getElementsByClassName("box");
 
-for (let i = 0; i < board.length; i++) {
+
+for (let i = 0, j = 1; i < board.length; i++) {
     if(i != board.length-1) board[i].innerHTML = i+1;
     board[i].addEventListener("click", move);
+    board[i].setAttribute("x", (i%4)+1);
+    board[i].setAttribute("y", j);
+    if(!((i+1)%4))  j++;
 }
 
 function setup(){
     shuffle();
+    idEmpty = document.getElementsByClassName('box empty')[0].id;
     hideDialog();
+    playBtn.addEventListener('click', setup);
 }
 
 let first = true;
@@ -15,8 +21,13 @@ let idEmpty;
 
 function move(){
     const empty = document.getElementById(idEmpty);
-    const dif  = Math.abs(parseInt(this.id.slice(4)) - parseInt(empty.id.slice(4)));
-    if(this.innerHTML != '' &&  (dif == 4 || dif == 1)){
+    const x = parseInt(this.getAttribute("x")), y = parseInt(this.getAttribute("y"));
+    const emptyx = parseInt(empty.getAttribute("x")), emptyy = parseInt(empty.getAttribute("y"));
+    if(   
+        this.innerHTML != '' && 
+        (x-emptyx == 0 && Math.abs(y-emptyy) == 1) || 
+        (y-emptyy == 0 && Math.abs(x-emptyx) == 1)
+    ){
         // add class for css
         this.className = 'box empty';
         empty.className = 'box'
@@ -45,9 +56,11 @@ function checkWin(){
 }
 
 function shuffle() {
-    // Configurazione casuale
+    /*const empty = document.getElementById(idEmpty);
+    const x = parseInt(empty.getAttribute("x"));
+    const y = parseInt(empty.getAttribute("y"));*/
+
     for (let i = board.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
         const temp = board[i].innerHTML;
         board[i].innerHTML = board[j].innerHTML;
         board[j].innerHTML = temp;
@@ -56,6 +69,5 @@ function shuffle() {
         board[i].className = board[j].className;
         board[j].className = tempClass;
     }
-    idEmpty = document.getElementsByClassName('box empty')[0].id;
 }
 setup();
