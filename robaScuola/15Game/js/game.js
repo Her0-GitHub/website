@@ -11,16 +11,14 @@ for (let i = 0, j = 1; i < board.length; i++) {
 
 function setup(){
     shuffle();
-    idEmpty = document.getElementsByClassName('box empty')[0].id;
     hideDialog();
     playBtn.addEventListener('click', setup);
 }
 
 let first = true;
-let idEmpty;
 
 function move(){
-    const empty = document.getElementById(idEmpty);
+    const empty = document.getElementsByClassName('box empty')[0];
     const x = parseInt(this.getAttribute("x")), y = parseInt(this.getAttribute("y"));
     const emptyx = parseInt(empty.getAttribute("x")), emptyy = parseInt(empty.getAttribute("y"));
     if(   
@@ -34,14 +32,12 @@ function move(){
         // swap number
         const temp = this.innerHTML;
         this.innerHTML = empty.innerHTML;
-        empty.innerHTML =  temp;
-        // change id empty var
-        idEmpty = this.id;
+        empty.innerHTML = temp;
         // check win only when empty is in box-16
         if(this.id == "box-16"){
             checkWin();
         }
-        if(first)  startCronometro(); first = false;
+        if(first){startCronometro(); first = false;}
     }   
 }
 
@@ -56,18 +52,29 @@ function checkWin(){
 }
 
 function shuffle() {
-    /*const empty = document.getElementById(idEmpty);
-    const x = parseInt(empty.getAttribute("x"));
-    const y = parseInt(empty.getAttribute("y"));*/
-
-    for (let i = board.length - 1; i > 0; i--) {
-        const temp = board[i].innerHTML;
-        board[i].innerHTML = board[j].innerHTML;
-        board[j].innerHTML = temp;
-
-        const tempClass = board[i].className;
-        board[i].className = board[j].className;
-        board[j].className = tempClass;
+    for(let i = 0; i < board.length*4; i++){
+        let empty = document.getElementsByClassName('box empty')[0];
+        console.log(empty)
+        console.log(document.getElementsByClassName('box empty')[0])
+        let x = parseInt(empty.getAttribute('x'));
+        let y = parseInt(empty.getAttribute('y'));
+        let coord = [];
+        if(x!=4)    coord.push([x+1, y]);
+        if(y!=4)    coord.push([x, y+1]);
+        if(x!=1)    coord.push([x-1, y]);
+        if(y!=1)    coord.push([x, y-1]);
+        let random = Math.floor(Math.random() * coord.length);
+        let swap = getElementByXY(coord[random][0], coord[random][1]);
+        // swap number
+        let temp = swap.innerHTML;
+        swap.innerHTML = empty.innerHTML;
+        empty.innerHTML = temp;
+        // add class for css
+        swap.className = 'box empty';
+        empty.className = 'box';
     }
+}
+function getElementByXY(x, y){
+    return document.getElementById("box-" + ((y - 1) * 4 + x));
 }
 setup();
