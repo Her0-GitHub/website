@@ -54,8 +54,6 @@ function checkWin(){
 function shuffle() {
     for(let i = 0; i < board.length*board.length; i++){
         let empty = document.getElementsByClassName('box empty')[0];
-        console.log(empty)
-        console.log(document.getElementsByClassName('box empty')[0])
         let x = parseInt(empty.getAttribute('x'));
         let y = parseInt(empty.getAttribute('y'));
         let coord = [];
