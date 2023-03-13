@@ -25,7 +25,7 @@ function stopCronometro() {
 function clearCronometro() {
     clearInterval(Intervalo);
     totalTime = 0;
-    document.getElementById("minuti").innerHTML = 0;
-    document.getElementById("secondi").innerHTML = 0;
+    document.getElementById("minuti").innerHTML = 00;
+    document.getElementById("secondi").innerHTML = 00;
     document.getElementById("ms").innerHTML = 0;
 }
