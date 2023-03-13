@@ -1,5 +1,5 @@
 const board = document.getElementsByClassName("box");
-
+let first
 
 for (let i = 0, j = 1; i < board.length; i++) {
     if(i != board.length-1) board[i].innerHTML = i+1;
@@ -12,10 +12,10 @@ for (let i = 0, j = 1; i < board.length; i++) {
 function setup(){
     shuffle();
     hideDialog();
+    clearCronometro();
     playBtn.addEventListener('click', setup);
+    first = true;
 }
-
-let first = true;
 
 function move(){
     const empty = document.getElementsByClassName('box empty')[0];
@@ -52,7 +52,7 @@ function checkWin(){
 }
 
 function shuffle() {
-    for(let i = 0; i < board.length*4; i++){
+    for(let i = 0; i < board.length*board.length; i++){
         let empty = document.getElementsByClassName('box empty')[0];
         console.log(empty)
         console.log(document.getElementsByClassName('box empty')[0])

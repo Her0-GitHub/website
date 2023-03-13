@@ -18,5 +18,4 @@ function hideDialog() {
   dialog.style.display = 'none';
 }
 
-
 //showDialog(``, ``, "Gioca");
