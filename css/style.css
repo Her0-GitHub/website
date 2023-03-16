@@ -23,7 +23,6 @@ body{
   text-align: center;
 }
 
-
 .her0-red{
   height: 100px;
   background: #fe0001;
@@ -74,16 +73,6 @@ body{
   margin-right: 8px;
   font-size: 16px;
 }
-
-
-.options{
-  color: #FF0793;
-}
-
-.work{
-  color: #fe0001;
-}
-
 
 .menu-toggle-btn{
   float: right;

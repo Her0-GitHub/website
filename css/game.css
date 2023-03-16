@@ -1,0 +1,29 @@
+#content{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 3%;
+}
+.game-card{
+    width: 400px;
+    height: 250px;
+    background-color: #2f3640;
+    border-radius: 10%;
+}
+.game-title{
+    color: white;
+    text-align: center;
+    font-size: 300%;
+}
+.game-body img{
+    width: 90%;
+    padding-left: 10%;
+    height: auto;
+}
+.game-footer{
+    position: relative;
+    color: white;
+    padding-top:10%;
+    font-size: 150%;
+    text-align: center;
+}
