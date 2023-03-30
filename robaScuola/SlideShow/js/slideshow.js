@@ -1,9 +1,9 @@
 const NumFile = 3;
-let activeImg = 3; // 1..NumFIle
+let activeImg = 1; // 1..NumFIle
 
 const dot = document.getElementById('dot');
 const leftButton = document.getElementById('left-button');
-const rightButton = document.getElementById('left-button');
+const rightButton = document.getElementById('right-button');
 const img = document.getElementsByTagName('img')[0];
 
 leftButton.addEventListener("click", left);
@@ -21,36 +21,38 @@ for(let i = 0; i<NumFile; i++){
     dot.appendChild(newDot);
     newDot.addEventListener("click", goto);
 }
+console.log("fine setup " + activeImg)
 function goto(){
-    const n = this.getAttribute('n');
-    img.src = "img/Img" + n + ".png";
-    img.setAttribute("n", n);
-    this.className = "dot active";
-    document.getElementsByClassName('dot')[activeImg-1].className = "dot";
-    activeImg = n;
+    if(this.className != 'dot active'){
+        const n = parseInt(this.getAttribute('n'));
+        img.src = "img/Img" + n + ".png";
+        img.setAttribute("n", n);
+        this.classList.add('active');
+        document.getElementsByClassName('dot')[activeImg-1].classList.remove('active');
+        activeImg = n;
+    }
+    console.log(activeImg);
 }
 function left(){
     let n = parseInt(img.getAttribute('n'))-1;
-    if(n == 0){
+    if(n < 1){
         n = 3;
     }
     img.setAttribute("n", n);
-    console.log(n);
     img.src = "img/Img" + n + ".png";
-    document.getElementsByClassName('dot')[n-1].className = "dot active";
-    document.getElementsByClassName('dot')[activeImg-1].className = "dot";
+    document.getElementsByClassName('dot')[n-1].classList.add('active');
+    document.getElementsByClassName('dot')[activeImg-1].classList.remove('active');
     activeImg = n;
 }
 
 function right(){
     let n = parseInt(img.getAttribute('n'))+1;
-    if(n == 4){
+    if(n > 3){
         n = 1;
     }
     img.setAttribute("n", n);
     img.src = "img/Img" + n + ".png";
-    console.log(n);
-    document.getElementsByClassName('dot')[n-1].className = "dot active";
-    document.getElementsByClassName('dot')[activeImg-1].className = "dot";
+    document.getElementsByClassName('dot')[n-1].classList.add('active');
+    document.getElementsByClassName('dot')[activeImg-1].classList.remove('active');
     activeImg = n;
 }
