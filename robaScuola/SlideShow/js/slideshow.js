@@ -21,7 +21,6 @@ for(let i = 0; i<NumFile; i++){
     dot.appendChild(newDot);
     newDot.addEventListener("click", goto);
 }
-console.log("fine setup " + activeImg)
 function goto(){
     if(this.className != 'dot active'){
         const n = parseInt(this.getAttribute('n'));
@@ -31,7 +30,6 @@ function goto(){
         document.getElementsByClassName('dot')[activeImg-1].classList.remove('active');
         activeImg = n;
     }
-    console.log(activeImg);
 }
 function left(){
     let n = parseInt(img.getAttribute('n'))-1;

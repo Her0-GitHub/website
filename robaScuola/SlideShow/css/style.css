@@ -24,7 +24,7 @@ body{
     -ms-user-select: none;
     user-select: none;
 }
-#board{
+#container{
     background-color: transparent;
     height: auto;
     min-width: 1080px;
@@ -32,8 +32,9 @@ body{
     position: relative;
     display: flex;
 }
-#board img{
+#container img{
     width: 100%;
+    transform: 0.2s;
 }
 .button{
     position: absolute;
@@ -44,7 +45,7 @@ body{
     top: 50%;
     border-radius: 10%;
     font-size: 200%;
-    color: white;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
