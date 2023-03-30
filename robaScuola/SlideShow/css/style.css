@@ -34,7 +34,6 @@ body{
 }
 #container img{
     width: 100%;
-    transform: 0.2s;
 }
 .button{
     position: absolute;
@@ -72,9 +71,6 @@ body{
     border-radius: 50%;
     transition: background-color 0.4s ease;
 }
-.active{
-    background-color: var(--active);
-}
-.dot:hover{
+.active, .dot:hover{
     background-color: var(--active);
 }
