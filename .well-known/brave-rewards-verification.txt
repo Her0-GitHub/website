@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: her0.ml
-Token: a77399ce80fce8c45f5d2dd2f3132bfbcdc531ba6fa753e149c1cd2c90d1d9df
