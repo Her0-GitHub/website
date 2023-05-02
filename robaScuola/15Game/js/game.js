@@ -4,9 +4,9 @@ let first
 for (let i = 0, j = 1; i < board.length; i++) {
     if(i != board.length-1) board[i].innerHTML = i+1;
     board[i].addEventListener("click", move);
-    board[i].setAttribute("x", (i%4)+1);
+    board[i].setAttribute("x", (i%5)+1);
     board[i].setAttribute("y", j);
-    if(!((i+1)%4))  j++;
+    if(!((i+1)%5))  j++;
 }
 
 function setup(){
@@ -57,8 +57,8 @@ function shuffle() {
         let x = parseInt(empty.getAttribute('x'));
         let y = parseInt(empty.getAttribute('y'));
         let coord = [];
-        if(x!=4)    coord.push([x+1, y]);
-        if(y!=4)    coord.push([x, y+1]);
+        if(x!=5)    coord.push([x+1, y]);
+        if(y!=5)    coord.push([x, y+1]);
         if(x!=1)    coord.push([x-1, y]);
         if(y!=1)    coord.push([x, y-1]);
         let random = Math.floor(Math.random() * coord.length);
@@ -73,6 +73,6 @@ function shuffle() {
     }
 }
 function getElementByXY(x, y){
-    return document.getElementById("box-" + ((y - 1) * 4 + x));
+    return document.getElementById("box-" + ((y - 1) * 5 + x));
 }
 setup();
