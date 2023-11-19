@@ -1,0 +1,9 @@
+/* Firefox */ *{scrollbar-width: thin;scrollbar-color: #343A40 #DFE9EB;}
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar{width: 10px;}
+*::-webkit-scrollbar-track{border-radius: 5px;background-color: #DFE9EB;}
+*::-webkit-scrollbar-track:hover{background-color: #B8C0C2;}
+*::-webkit-scrollbar-track:active{background-color: #B8C0C2;}
+*::-webkit-scrollbar-thumb{border-radius: 5px;background-color: #343A40;}
+*::-webkit-scrollbar-thumb:hover{background-color: #7f92a6;}
+*::-webkit-scrollbar-thumb:active{background-color: #343A40;}
