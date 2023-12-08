@@ -2,7 +2,7 @@ setInterval(function (){
     let macList = document.querySelector("#mac").value.split("\n");
     for (let i = 0; i < macList.length; i++) {
         try{
-            macList[i] = new MAC(macList[i]);
+            macList[i] = new MAC(macList[i].trim().toUpperCase());
         } catch (e) {
             macList.splice(i, 1);
             i--;
@@ -25,14 +25,14 @@ class MAC {
         if (mac.length !== 17) {
             throw new Error("MAC must be 17 characters long");
         }
-        if (!mac.match(/^[A-Fa-f0-9]{2}(:[A-Fa-f0-9]{2}){5}$/)) {
+        if (!(mac.match(/^[A-Fa-f0-9]{2}(:[A-Fa-f0-9]{2}){5}$/) || mac.match(/^[A-Fa-f0-9]{4}(.[A-Fa-f0-9]{4}){2}$/))) {
             throw new Error("MAC must be in the format XX:XX:XX:XX:XX:XX");
         }
         this.mac = mac;
     }
 
     getMacNoColons() {
-        return this.mac.replace(/:/g, "");
+        return this.mac.replace(/:/g, "").replace(/\./g, "");
     }
 
     getMacAsNumber() {
