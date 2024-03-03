@@ -7,7 +7,7 @@ html,body{
     height: 100%;
     overflow: hidden;
     background-color: #b61924;
-    background-image: url('https://her0.cf/images/Profile.jpg');
+    background-image: url('/images/Profile.jpg');
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
